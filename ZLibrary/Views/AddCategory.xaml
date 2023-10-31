@@ -1,0 +1,19 @@
+﻿<Window x:Class="ZLibrary.View.Views.AddCategory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZLibrary.View.Views"
+        mc:Ignorable="d"
+        Title="AddCategory" Height="150" Width="300">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Enter Category Name:"/>
+            <TextBox x:Name="txtInput" Text="{Binding AddCategoryName}" Margin="0 5"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="OK" Width="80" Margin="0 5 10 0" Command="{Binding SaveAddCategory}"/>
+                <Button Content="Cancel" Width="80" Margin="0 5 0 0" Click="Cancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
